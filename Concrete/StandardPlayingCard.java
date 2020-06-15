@@ -7,7 +7,7 @@ public class StandardPlayingCard implements Card, Comparable<StandardPlayingCard
 
     private static final String DISPLAY_TEMPLATE = "%s of %s";
     private static final String TO_STRING_TEMPLATE = "{ suit: %s, face: %s, value: %s }";
-    
+
     private Suit suit;
     private Face face;
 
@@ -16,7 +16,7 @@ public class StandardPlayingCard implements Card, Comparable<StandardPlayingCard
         this.face = face;
     }
 
-    public Face getFace(){
+    public Face getFace() {
         return this.face;
     }
 
