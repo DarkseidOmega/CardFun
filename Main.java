@@ -5,6 +5,8 @@ import CardFun.Concrete.*;
 public class Main {
     public static void main(String[] args) {
 
+        //Note: deck prints backwards because we're pulling from the back 
+
         StandardPlayingCardDeck rawInitializedDeck = new StandardPlayingCardDeck();
 
         StandardPlayingCardDeck naturallyOrderDeck = new StandardPlayingCardDeck();
