@@ -7,7 +7,6 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 import CardFun.Interfaces.Card;
-import CardFun.Utilities.DeckUtils;
 
 public abstract class AbstractDeck<T extends Card> {
 
