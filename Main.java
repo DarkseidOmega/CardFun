@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         StandardPlayingCardDeck rawInitializedDeck = new StandardPlayingCardDeck();
-        
+
         StandardPlayingCardDeck naturallyOrderDeck = new StandardPlayingCardDeck();
         naturallyOrderDeck.sort(null);
 
