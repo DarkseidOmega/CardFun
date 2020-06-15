@@ -10,10 +10,8 @@ public abstract class AbstractDeck<T extends Card> {
 
     private List<T> deck;
 
-    protected abstract List<T> generateCardSet();
-
-    public AbstractDeck() {
-        this.deck = generateCardSet();
+    public AbstractDeck(List<T> deck) {
+        this.deck = deck;
     }
 
     public void shuffle() {
