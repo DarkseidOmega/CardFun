@@ -10,6 +10,10 @@ public abstract class AbstractDeck<T extends Card> {
 
     private List<T> deck;
 
+    public AbstractDeck(List<T> deck) {
+        this.deck = deck;
+    }
+
     public void shuffle() {
         DeckUtils.fisherYatesShuffle(this.deck);
     }

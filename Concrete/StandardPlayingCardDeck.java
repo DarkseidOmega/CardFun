@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class StandardPlayingCardDeck extends AbstractDeck<StandardPlayingCard> {
     private static final int DECK_SIZE = 52;
     
-    public StandardPlayingCardDeck() {
+    private static ArrayList<StandardPlayingCard> generateCardSet() {
         ArrayList<StandardPlayingCard> deck = new ArrayList<>(DECK_SIZE);
 
         for(Suit suit : Suit.values()) {
@@ -15,6 +15,12 @@ public class StandardPlayingCardDeck extends AbstractDeck<StandardPlayingCard> {
                 deck.add(new StandardPlayingCard(suit, face));
             }
         }
-        setDeck(deck);
+
+        return deck;
+    };
+
+
+    public StandardPlayingCardDeck() {
+        super(StandardPlayingCardDeck.generateCardSet());
     }
 }
