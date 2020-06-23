@@ -59,8 +59,4 @@ public abstract class AbstractDeck<T extends Card> {
     public int cardsLeft() {
         return this.deck.size();
     }
-
-    protected void setDeck(List<T> deck) {
-        this.deck = deck;
-    }
 }
