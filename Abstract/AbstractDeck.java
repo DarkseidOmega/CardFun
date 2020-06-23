@@ -12,7 +12,7 @@ public abstract class AbstractDeck<T extends Card> {
 
     private List<T> deck;
 
-    public AbstractDeck(List<T> deck) {
+    protected AbstractDeck(List<T> deck) {
         this.deck = deck;
     }
 
@@ -58,5 +58,9 @@ public abstract class AbstractDeck<T extends Card> {
 
     public int cardsLeft() {
         return this.deck.size();
+    }
+
+    protected void setDeck(List<T> deck) {
+        this.setDeck(deck);
     }
 }
