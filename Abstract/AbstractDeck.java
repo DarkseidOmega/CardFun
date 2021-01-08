@@ -12,7 +12,7 @@ public abstract class AbstractDeck<T extends Card> {
 
     private List<T> deck;
 
-    public AbstractDeck(List<T> deck) {
+    protected AbstractDeck(List<T> deck) {
         this.deck = deck;
     }
 
@@ -28,9 +28,6 @@ public abstract class AbstractDeck<T extends Card> {
      *      implementing it here also.
      */
     public void shuffle() {
-        if (this.deck == null)
-            throw new IllegalArgumentException();
-
         Random randNumGenerator = ThreadLocalRandom.current();
         for (int i = this.deck.size() - 1; i > 0; i--) {
             int swapIndex = randNumGenerator.nextInt(i + 1);
@@ -45,14 +42,10 @@ public abstract class AbstractDeck<T extends Card> {
      * Remove and return one card from the top of the deck.
      */
     public T dealOneCard() {
-        if (this.deck == null)
-            throw new IllegalArgumentException();
-
-        int lastIndex = this.deck.size() - 1;
-        if (lastIndex < 0)
+        if (this.deck.size() < 1)
             throw new NoSuchElementException(); // or return null ?
 
-        return this.deck.remove(lastIndex);
+        return this.deck.remove(0);
     }
 
     public void sort(Comparator<T> comparator) {
@@ -68,6 +61,6 @@ public abstract class AbstractDeck<T extends Card> {
     }
 
     protected void setDeck(List<T> deck) {
-        this.deck = deck;
+        this.setDeck(deck);
     }
 }
